@@ -30,12 +30,11 @@ div {
   margin: 2%;
 }
 .text {
-  font-size: 1.3rem;
-  margin: 3% 0;
+  margin: 0 10%;
 }
 .container__form1 {
   width: 100%;
 }
-.container__form2 {
+.form2 {
   width: 60%;
 }

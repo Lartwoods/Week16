@@ -4,77 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/calc_style.css" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/styles/normalize.css" />
-    <link rel=" stylesheet" href="assets/styles/calc_style.css" />
   </head>
   <body>
-    <h1 > Расчёт стоимости автомобиля</h1>
+    <div class="fill">
+      <h1 class="text">Рассчтитать стоимость аренды автомобиля</h1>
+    </div>
     <div class="container">
-     
-      <form action="#" class="container__form1 form">
-        <div class="form__item_category">
-          <p class="text__categoty text">Тип услуги</p>
-          <ul class="switch">
-            <li class="switch__input">
+      <form action="#" class="form form1">
+        <div class="form__item">
+          <h2 class="heading">Выберите свой тариф</h2>
+          <ul class="switcher">
+            <li class="switcher__item">
               <input
                 type="radio"
-                name="category"
+                name="tariff"
                 id="economy"
-                class="category"
-                value="Economy"
+                class="tariff"
+                value="economy"
               />
-              <label for="economy"> Целый автомобиль</label>
+              <label for="economy">Эконом</label>
             </li>
-            <li class="switch__input">
+            <li class="switcher__item">
               <input
                 type="radio"
-                name="category"
+                name="tariff"
                 id="comfort"
-                class="category"
-                value="Comfort"
+                class="tariff"
+                value="comfort"
+                checked="checked"
               />
-              <label for="economy"> Распил легковой</label>
+              <label for="comfort">Комфорт</label>
             </li>
-            <li class="switch__input">
+            <li class="switcher__item">
               <input
                 type="radio"
-                name="category"
+                name="tariff"
                 id="business"
-                class="category"
-                value="Business"
+                class="tariff"
+                value="business"
               />
-              <label for="economy"> Распил рамный</label>
+              <label for="business">Бизнес</label>
             </li>
-            <li class="switch__input">
+            <li class="switcher__item">
               <input
                 type="radio"
-                name="category"
+                name="tariff"
                 id="premium"
-                class="category"
-                value="Premium"
+                class="tariff"
+                value="premium"
               />
-              <label for="economy"> Запчасти</label>
+              <label for="premium">Премиум</label>
             </li>
           </ul>
         </div>
-        <div class="form__item_hours">
-          <p class="text__hours text">Возраст автомобиля</p>
+        <div class="form__item">
+          <h2 class="heading">На сколько часов арендуем (минимум 2 часа)</h2>
           <div class="slider">
-          <input
-            type="range"
-            name="time"
-            id="hours"
-            step="1"
-            min="1"
-            max="50"
-            value="1"
-          />
-          <output id="volume" for="hours">1</output>
+            <input
+              type="range"
+              name="time"
+              id="time"
+              step="1"
+              min="2"
+              max="96"
+              value="2"
+            />
+            <output id="volume" for="time">2</output>
+          </div>
         </div>
-      </div>
-        <div class="form__item_gas">
-          <p class="heading text">Тип топлива</p>
+        <div class="form__item">
+          <h2 class="heading">Дополнительные параметры</h2>
           <div>
             <div class="option__item">
               <input
@@ -84,7 +85,7 @@
                 class="option"
               />
               <label for="option1" class="checkmark"></label>
-              <label for="option1">Бензин</label>
+              <label for="option1">Подача в области</label>
             </div>
             <div class="option__item">
               <input
@@ -94,7 +95,7 @@
                 class="option"
               />
               <label for="option2" class="checkmark"></label>
-              <label for="option2">Дизельное топливо</label>
+              <label for="option2">Детское кресло с креплениями</label>
             </div>
             <div class="option__item">
               <input
@@ -104,31 +105,39 @@
                 class="option"
               />
               <label for="option3" class="checkmark"></label>
-              <label for="option3">Электрический</label>
+              <label for="option3">Комплект свадебных украшений</label>
             </div>
-            
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option4"
+                id="option4"
+                class="option"
+              />
+              <label for="option4" class="checkmark"></label>
+              <label for="option4">Дополнительная страховка</label>
+            </div>
           </div>
         </div>
       </form>
-      </form>
-      <form action="#" class="container__form2 form">
-        <div class="form__item_result form__item">
-          <p class="heading text">Ваш заказ</p>
-          <div class="category order">
-            <p>Тип услуги:</p>
-            <output id="order_category">—</output>
+      <form action="#" class="form form2">
+        <div class="form__item">
+          <h2 class="heading">Ваш заказ</h2>
+          <div class="order">
+            <span>Тариф:</span>
+            <output id="order_tariff">—</output>
           </div>
-          <div class="age order">
-            <p>Возраст автомобиля:</p>
-            <output id="age_years">—</output>
+          <div class="order">
+            <span>Срок аренды:</span>
+            <output id="order_time">—</output>
           </div>
-          <div class="gas order">
-            <p>Тип топлива:</p>
+          <div class="order">
+            <span>Дополнительно:</span>
             <output id="order_option">—</output>
           </div>
         </div>
         <div class="form__item">
-          <p class="heading text">Итоговая стоимость</p>
+          <h2 class="heading">Итоговая стоимость поездки</h2>
           <output class="total" id="total">0</output>
         </div>
       </form>
