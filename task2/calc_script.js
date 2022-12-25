@@ -30,6 +30,7 @@ let currentSet = {
     return optionPrice;
   },
 };
+console.log(getOptionPrice());
 const tariff = Array.from(document.querySelectorAll(".tariff"));
 const option = Array.from(document.querySelectorAll(".option"));
 const volume = document.querySelector("#volume");
@@ -64,7 +65,7 @@ function optionUpdate(e) {
     currentSet.option.push(e.target.id);
   } else {
     let index = currentSet.option.indexOf(e.target.id);
-    currentSet.option.splice(index, 1);
+    currentSet.option.splice[1];
   }
   updatePrice();
   orderUpdate();
