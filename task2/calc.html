@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css" />
+    <link rel=" stylesheet" href="assets/styles/calc_style.css" />
+  </head>
+  <body>
+    <h1 > Расчёт стоимости автомобиля</h1>
+    <div class="container">
+     
+      <form action="#" class="container__form1 form">
+        <div class="form__item_category">
+          <p class="text__categoty text">Тип услуги</p>
+          <ul class="switch">
+            <li class="switch__input">
+              <input
+                type="radio"
+                name="category"
+                id="economy"
+                class="category"
+                value="Economy"
+              />
+              <label for="economy"> Целый автомобиль</label>
+            </li>
+            <li class="switch__input">
+              <input
+                type="radio"
+                name="category"
+                id="comfort"
+                class="category"
+                value="Comfort"
+              />
+              <label for="economy"> Распил легковой</label>
+            </li>
+            <li class="switch__input">
+              <input
+                type="radio"
+                name="category"
+                id="business"
+                class="category"
+                value="Business"
+              />
+              <label for="economy"> Распил рамный</label>
+            </li>
+            <li class="switch__input">
+              <input
+                type="radio"
+                name="category"
+                id="premium"
+                class="category"
+                value="Premium"
+              />
+              <label for="economy"> Запчасти</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item_hours">
+          <p class="text__hours text">Возраст автомобиля</p>
+          <div class="slider">
+          <input
+            type="range"
+            name="time"
+            id="hours"
+            step="1"
+            min="1"
+            max="50"
+            value="1"
+          />
+          <output id="volume" for="hours">1</output>
+        </div>
+      </div>
+        <div class="form__item_gas">
+          <p class="heading text">Тип топлива</p>
+          <div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option1"
+                id="option1"
+                class="option"
+              />
+              <label for="option1" class="checkmark"></label>
+              <label for="option1">Бензин</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option2"
+                id="option2"
+                class="option"
+              />
+              <label for="option2" class="checkmark"></label>
+              <label for="option2">Дизельное топливо</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option3"
+                id="option3"
+                class="option"
+              />
+              <label for="option3" class="checkmark"></label>
+              <label for="option3">Электрический</label>
+            </div>
+            
+          </div>
+        </div>
+      </form>
+      </form>
+      <form action="#" class="container__form2 form">
+        <div class="form__item_result form__item">
+          <p class="heading text">Ваш заказ</p>
+          <div class="category order">
+            <p>Тип услуги:</p>
+            <output id="order_category">—</output>
+          </div>
+          <div class="age order">
+            <p>Возраст автомобиля:</p>
+            <output id="age_years">—</output>
+          </div>
+          <div class="gas order">
+            <p>Тип топлива:</p>
+            <output id="order_option">—</output>
+          </div>
+        </div>
+        <div class="form__item">
+          <p class="heading text">Итоговая стоимость</p>
+          <output class="total" id="total">0</output>
+        </div>
+      </form>
+    </div>
+    <script src="calc_script.js"></script>
+  </body>
+</html>
