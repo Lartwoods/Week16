@@ -9,12 +9,12 @@ function add_element_to_array() {
 }
 
 function display_array() {
-  let e = "<hr/>";
+  let list = "";
 
   for (let y = 0; y < Mass.length; y++) {
-    e += Mass[y] + "<br/>";
+    list += Mass[y] + "<br/>";
   }
-  document.getElementById("Result").innerHTML = e;
+  document.getElementById("Result").innerHTML = list;
 }
 button2.addEventListener("click", function () {
   let counter = 0;
@@ -26,5 +26,5 @@ button2.addEventListener("click", function () {
 let sortMass = Mass.sort(function (a, b) {
   if (a < b) return -1;
   console.log(a, b);
+  document.getElementById("Result").innerHTML = list;
 });
-console.log(sortMass);
