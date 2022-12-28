@@ -11,12 +11,8 @@ body {
   height: 100%;
   background-color: antiquewhite;
 }
-p {
-  font-size: 1.5rem;
-  margin: 1%;
-}
-.array,
-.sum {
+
+div {
   width: 30%;
   height: 200px;
   margin: 1%;
@@ -27,15 +23,7 @@ p {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.form_calc {
-  display: flex;
-  flex-direction: column;
-}
+
 input,
 button {
   width: 100px;
